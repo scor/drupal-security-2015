@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url("../../fonts/opensans/opensans.css");
 /**
  * A simple theme for reveal.js presentations, similar
  * to the default theme. The accent color is darkblue.
@@ -11,8 +12,13 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: white;
-  background-color: white; }
+  background: white url("../../deck/1520688-bg.png") center top;
+  color: #252525;
+  font-family: "Open Sans",Helvetica,sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
 
 .reveal {
   font-family: "Lato", sans-serif;
@@ -37,20 +43,27 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: black;
-  font-family: "News Cycle", Impact, sans-serif;
+  font-family: "Open Sans",Helvetica,sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
   text-transform: none;
-  text-shadow: none; }
+  text-shadow: none;
+  color: rgb(216, 63, 33);
+}
 
 .reveal h1 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  font-size: 56px;
+}
+
+.reveal h2 {
+  font-size: 56px;
+}
 
 /*********************************************
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: darkblue;
+  color: rgb(0, 106, 145);
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -59,7 +72,7 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #0000f1;
+  color: black;
   text-shadow: none;
   border: none; }
 
