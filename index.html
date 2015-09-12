@@ -131,15 +131,11 @@
 				</section>
 				<section data-markdown>
 					<script type="text/template">
-						## Modules enhancing security
+						## Secure site configuration
 
-						- [Secure Login](https://drupal.org/project/securelogin)
-						- [Paranoia](https://drupal.org/project/paranoia)
-						- [Security Review](https://drupal.org/project/security_review)
-						- [Permissions Lock](https://drupal.org/project/permissions_lock)
-						- [Two Factor Authentication](https://drupal.org/project/tfa)
-						- [Hacked!](https://drupal.org/project/hacked)
-						- [Password policy](https://drupal.org/project/password_policy)
+						- File permissions: web server user forbidden to change code
+						- PHP execution: restrict in .htaccess or Nginx config
+						- [Drupal handbook for securing your site](https://www.drupal.org/security/secure-configuration)
 					</script>
 				</section>
 				<section data-markdown>
@@ -154,6 +150,19 @@
 							- Code, DB, uploaded files, config
 							- Managed security updates
 								- Remote administration (Acquia)
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Modules enhancing security
+
+						- [Secure Login](https://drupal.org/project/securelogin)
+						- [Paranoia](https://drupal.org/project/paranoia)
+						- [Security Review](https://drupal.org/project/security_review)
+						- [Permissions Lock](https://drupal.org/project/permissions_lock)
+						- [Two Factor Authentication](https://drupal.org/project/tfa)
+						- [Hacked!](https://drupal.org/project/hacked)
+						- [Password policy](https://drupal.org/project/password_policy)
 					</script>
 				</section>
 				<section data-markdown>
@@ -444,7 +453,12 @@ views_ui.enable:
 					<script type="text/template">
 						## Drupal 8: lots more hardening
 
-						Blog post: [10 Ways Drupal 8 Will Be More Secure](https://dev.acquia.com/blog/drupal-8/10-ways-drupal-8-will-be-more-secure/2015/08/27/6621)
+						- PDO MySQL limited to executing single statements
+						- PHP execution in subfolders forbidden in .htaccess
+						- Clickjacking protection per default with X-Frame-Options
+						- Hashed user session IDs in the DB
+						- Trusted hosts pattern to restrict URL domains
+						- Blog post: [10 Ways Drupal 8 Will Be More Secure](https://dev.acquia.com/blog/drupal-8/10-ways-drupal-8-will-be-more-secure/2015/08/27/6621)
 					</script>
 				</section>
 				<section>
@@ -463,9 +477,9 @@ views_ui.enable:
 						</div>
 						<ul style="float: left;">
 							<li>DGD7 chapter 6</li>
-							<li><a href="http://drupal.org/security-team">http://drupal.org/security-team</a></li>
+							<li><a href="https://www.drupal.org/security-team">https://www.drupal.org/security-team</a></li>
 							<li><a href="http://www.drupalsecurityreport.org">http://www.drupalsecurityreport.org</a></li>
-							<li><a href="http://groups.drupal.org/security">http://groups.drupal.org/security</a></li>
+							<li><a href="https://groups.drupal.org/security">https://groups.drupal.org/security</a></li>
 							<li><a href="http://crackingdrupal.com/blog">http://crackingdrupal.com/blog</a></li>
 							<li><a href="https://docs.acquia.com/search/site/security">https://docs.acquia.com/</a></li>
 						</ul>
